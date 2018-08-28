@@ -1,0 +1,27 @@
+{
+  "name": "PopSelector",
+  "version": "0.1.0",
+  "summary": "A short description of PopSelector.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/winann/PopSelector",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "winann": "sya@mogoroom.com"
+  },
+  "source": {
+    "git": "https://github.com/winann/PopSelector.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "9.0"
+  },
+  "source_files": "PopSelector/Classes/**/*",
+  "resource_bundles": {
+    "PopSelector": [
+      "PopSelector/Assets/*.png"
+    ]
+  }
+}

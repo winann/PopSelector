@@ -1,0 +1,6 @@
+framework module Pods_PopSelector_Tests {
+  umbrella header "Pods-PopSelector_Tests-umbrella.h"
+
+  export *
+  module * { export * }
+}

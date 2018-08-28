@@ -7,8 +7,9 @@
 //
 
 import UIKit
+import PopSelector
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, WillShowPopSelector {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,5 +21,16 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    @IBAction func showAction(_ sender: UIButton) {
+        let models = ["录租房", "录二手房"].map { (str) -> ContentModel in
+            var model = ContentModel()
+            model.title = str
+            model.image = UIImage(named: str)
+            return model
+        }
+        showSelector(from: self, models: models, callBack: { seleceModel in
+            
+        })
+    }
 }
 

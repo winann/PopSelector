@@ -1,0 +1,6 @@
+framework module PopSelector {
+  umbrella header "PopSelector-umbrella.h"
+
+  export *
+  module * { export * }
+}

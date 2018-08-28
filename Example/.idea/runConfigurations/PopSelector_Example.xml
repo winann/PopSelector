@@ -1,0 +1,7 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="PopSelector-Example" type="AppleRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="PopSelector" TARGET_NAME="PopSelector_Example" CONFIG_NAME="Debug" SCHEME_NAME="PopSelector-Example" IS_LOCATION_SIMULATION_ALLOWED="true" RUN_TARGET_PROJECT_NAME="PopSelector" RUN_TARGET_NAME="PopSelector_Example" MAKE_ACTIVE="TRUE">
+    <method v="2">
+      <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+    </method>
+  </configuration>
+</component>
