@@ -104,9 +104,15 @@ class PopSelectorViewController: UIViewController {
         /// bottom bg view
         let bottomLeading = bottomBGView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 0)
         let bottomTrailing = bottomBGView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: 0)
-        let bottomBottom = bottomBGView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: 0)
+        if #available(iOS 11.0, *) {
+            let bottomBottom = bottomBGView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: 0)
+            view.addConstraint(bottomBottom)
+        } else {
+            let bottomBottom = bottomBGView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: 0)
+            view.addConstraint(bottomBottom)
+        }
         let bottomHeight = bottomBGView.heightAnchor.constraint(equalToConstant: 75)
-        view.addConstraints([bottomLeading, bottomTrailing, bottomBottom, bottomHeight])
+        view.addConstraints([bottomLeading, bottomTrailing, bottomHeight])
 
         /// content bg View
         let contentLeading = contentBGView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: borderWidth)
