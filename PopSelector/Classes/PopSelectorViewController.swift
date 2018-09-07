@@ -35,7 +35,7 @@ class PopSelectorViewController: UIViewController {
             subview.removeFromSuperview()
         }
         contents = datas.map { (model) -> ContentView in
-            let view = ContentView(frame: CGRect.zero, image: model.image ?? UIImage(), title: model.title)
+            let view = ContentView(frame: CGRect.zero, image: model.image ?? UIImage(), title: model.title, tips: model.tips, disable: model.disable)
             return view
         }
         for (i, contentView) in contents.enumerated() {

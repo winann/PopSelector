@@ -13,6 +13,8 @@ public struct ContentModel {
     public var title: String = ""
     public var id: String = ""
     public var scheme: String = ""
+    public var disable: Bool = false
+    public var tips: String = ""
     public var data: Any?
 }
 public protocol WillShowPopSelector {
