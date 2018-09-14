@@ -52,7 +52,14 @@ class PopSelectorViewController: UIViewController {
             }
             contentView.tag = 1000 + i
             contentView.frame = tempFrame
-            contentView.click = contentClick
+            contentView.click = { [weak self] index in
+                guard let `self` = self else { return }
+                guard let datas = self.models, datas.count > index else { return }
+                self.hidden(for: index)
+                self.dismiss(animated: true) { [weak self] in
+                    self?.callBack?(datas[index])
+                }
+            }
             contentBGView.addSubview(contentView)
         }
         animation()
@@ -86,14 +93,6 @@ class PopSelectorViewController: UIViewController {
         opacityAnimation.duration = 0.5
         contents[i].layer.add(opacityAnimation, forKey: "opacity")
         contents[i].layer.add(scaleAnimation, forKey: "scale")
-    }
-    
-    private func contentClick(_ index: Int) {
-        guard let datas = models, datas.count > index else { return }
-        hidden(for: index)
-        self.dismiss(animated: true) { [weak self] in
-            self?.callBack?(datas[index])
-        }
     }
     
     private func layoutBGView() {
