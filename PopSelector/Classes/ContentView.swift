@@ -56,12 +56,12 @@ class ContentView: UIView {
         
         if !tips.isEmpty {
             let attrStr = NSMutableAttributedString(string: titleLable.text ?? "")
-            attrStr.addAttributes([NSAttributedStringKey.foregroundColor: titleLable.textColor], range: NSRange(location: 0, length: titleLable.text?.count ?? 0))
+            attrStr.addAttributes([NSAttributedString.Key.foregroundColor: titleLable.textColor], range: NSRange(location: 0, length: titleLable.text?.count ?? 0))
             var location = 0
             if let text = titleLable.text, !text.isEmpty {
                 location = text.count - tips.count
             }
-            attrStr.addAttributes([NSAttributedStringKey.font: UIFont.systemFont(ofSize: 12)], range: NSRange(location: location, length: tips.count))
+            attrStr.addAttributes([NSAttributedString.Key.font: UIFont.systemFont(ofSize: 12)], range: NSRange(location: location, length: tips.count))
             titleLable.attributedText = attrStr
         }
         addSubview(iconImageView)
