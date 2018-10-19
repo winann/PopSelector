@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'PopSelector'
-  s.version          = '0.1.3'
+  s.version          = '0.1.4'
   s.summary          = 'A pop selector'
 
 # This description is used to generate tags and improve search results.
@@ -31,7 +31,7 @@ Pop selector
   s.ios.deployment_target = '9.0'
 
   s.source_files = 'PopSelector/Classes/**/*.swift'
-  
+  s.swift_version = '4.2'
   s.resource_bundles = {
       'PopSelector' => ['PopSelector/Assets/*.png']
   }
